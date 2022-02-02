@@ -256,7 +256,6 @@ class _DataPipeMeta(GenericMeta):
         if '__iter__' in namespace:
             hook_iterator(namespace, 'enumerate(DataPipe)#{}'.format(name))
 
-        # For Python > 3.6
         cls.__origin__ = None
         # Need to add _is_protocol for Python 3.7 _ProtocolMeta
         if '_is_protocol' not in namespace:
